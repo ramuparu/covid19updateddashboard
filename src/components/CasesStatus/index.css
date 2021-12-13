@@ -1,0 +1,196 @@
+.countrywide_page {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+.countrywide_covid_stats_con {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.confirmed_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 148px;
+  width: 148px;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.confirmed_bg_card {
+  background-color: #331427;
+}
+
+.confirmed_card_btn {
+  border: none;
+  background-color: transparent;
+}
+
+@media (min-width: 900px) {
+  .confirmed_card {
+    width: 264px;
+    height: 232px;
+  }
+}
+.confirmed_para {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ff073a;
+  margin-bottom: 24px;
+}
+.confirmed_image {
+  height: 20px;
+  width: 20px;
+}
+.confirmed_cases_para {
+  margin-top: 24px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ff073a;
+}
+
+.active_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 148px;
+  width: 148px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.active_bg_card {
+  background-color: #132240;
+}
+
+.active_card_btn {
+  border: none;
+  background-color: transparent;
+}
+@media (min-width: 900px) {
+  .active_card {
+    width: 264px;
+    height: 232px;
+  }
+}
+
+.active_para {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ff073a;
+  margin-bottom: 24px;
+}
+.active_image {
+  height: 20px;
+  width: 20px;
+}
+.active_cases_para {
+  margin-top: 24px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ff073a;
+}
+.recovered_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 148px;
+  width: 148px;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.recovered_bg_card {
+  background-color: #182829;
+}
+
+.recovered_card_btn {
+  border: none;
+  background-color: transparent;
+}
+
+@media (min-width: 900px) {
+  .recovered_card {
+    width: 264px;
+    height: 232px;
+  }
+}
+
+.recover_para {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ff073a;
+  margin-bottom: 24px;
+}
+.recover_image {
+  height: 20px;
+  width: 20px;
+}
+.recover_cases_para {
+  margin-top: 24px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ff073a;
+}
+
+.deceased_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 148px;
+  width: 148px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.deceased_bg_card {
+  background-color: #212230;
+}
+
+.deceased_card_btn {
+  border: none;
+  background-color: transparent;
+}
+
+@media (min-width: 1100px) {
+  .deceased_card {
+    width: 264px;
+    height: 232px;
+  }
+}
+
+.decease_para {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ff073a;
+  margin-bottom: 24px;
+}
+.decease_image {
+  height: 20px;
+  width: 20px;
+}
+.decease_cases_para {
+  margin-top: 24px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ff073a;
+}

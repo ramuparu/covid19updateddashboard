@@ -1,0 +1,322 @@
+.vaccination_page {
+  margin-top: 28px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vaccination_state_name_head_card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.home_icon_style {
+  color: white;
+  margin-right: 12px;
+  height: 20px;
+  width: 20px;
+}
+.state_head_style {
+  color: #cbd5e1;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'roboto';
+}
+
+@media (min-width: 900px) {
+  .vaccination_page {
+    margin-top: 64px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 120px;
+  }
+  .state_head_style {
+    font-size: 32px;
+  }
+  .home_icon_style {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+.state_districts_dropdown_con {
+  display: flex;
+  align-items: center;
+}
+
+.state_names_select_card {
+  width: 104px;
+  height: 30px;
+  background-color: #222234;
+  border: none;
+  border-radius: 4px;
+}
+.state_option_style {
+  background-color: #f8fafc;
+}
+.district_names_select_card {
+  width: 104px;
+  height: 30px;
+  background-color: #222234;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+@media (min-width: 900px) {
+  .state_districts_dropdown_con {
+    align-self: flex-end;
+  }
+  .state_names_select_card {
+    width: 264px;
+    height: 52px;
+  }
+  .district_names_select_card {
+    width: 264px;
+    height: 52px;
+  }
+}
+
+.vaccination_sites_doses_con {
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+}
+
+.vaccination_sites_card {
+  display: flex;
+  background-color: #2f2f43;
+  border-radius: 12px;
+  border: none;
+  width: 312px;
+  height: 138px;
+  padding: 24px;
+  margin-bottom: 10px;
+}
+.vaccination_img {
+  height: 40px;
+  width: 40px;
+  margin-right: 12px;
+}
+
+.sites_stats_card {
+  display: flex;
+  flex-direction: column;
+}
+.site_conducting_card {
+  display: flex;
+  flex-direction: column;
+}
+.site_conducting_style {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+.site_conducting_stats_style {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+
+.government_private_sites_card {
+  display: flex;
+}
+.site_government_card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.site_government_style {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+
+.site_government_stats_style {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+
+.site_pvt_card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.site_pvt_style {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+
+.site_pvt_stats_style {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+.vaccination_doses_card {
+  display: flex;
+  background-color: #2f2f43;
+  border-radius: 12px;
+  border: none;
+  width: 312px;
+  height: 138px;
+  padding: 24px;
+}
+.admin_img {
+  height: 40px;
+  width: 40px;
+  margin-right: 12px;
+}
+
+.doses_stats_card {
+  display: flex;
+  flex-direction: column;
+}
+.total_doses_card {
+  display: flex;
+  flex-direction: column;
+}
+.total_doses_style {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+.total_doses_stats_style {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+
+.dose1_dose2_card {
+  display: flex;
+}
+.dose1_card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.dose1_style {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+
+.dose1_stats_style {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+
+.dose2_card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.dose2_style {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+
+.dose2_stats_style {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'roboto';
+  margin-top: 0px;
+}
+
+@media (min-width: 900px) {
+  .vaccination_sites_doses_con {
+    flex-direction: row;
+  }
+  .vaccination_sites_card {
+    padding: 32px;
+    height: 192px;
+    width: 420px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+  .vaccination_doses_card {
+    padding: 32px;
+    height: 192px;
+    width: 420px;
+  }
+  .vaccination_img {
+    height: 47px;
+    width: 47px;
+  }
+  .site_conducting_style {
+    font-size: 18px;
+  }
+  .site_conducting_stats_style {
+    font-size: 18px;
+  }
+  .site_government_style {
+    font-size: 18px;
+  }
+  .site_government_stats_style {
+    font-size: 18px;
+  }
+  .site_pvt_style {
+    font-size: 18px;
+  }
+  .site_pvt_stats_style {
+    font-size: 18px;
+  }
+  .admin_img {
+    height: 47px;
+    width: 47px;
+  }
+  .total_doses_style {
+    font-size: 18px;
+  }
+  .total_doses_stats_style {
+    font-size: 18px;
+  }
+  .dose1_style {
+    font-size: 18px;
+  }
+  .dose1_stats_style {
+    font-size: 18px;
+  }
+  .dose2_style {
+    font-size: 18px;
+  }
+  .dose2_stats_style {
+    font-size: 18px;
+  }
+}
+
+.vaccination_timeline_multi_chart_con {
+  background-color: #1c1c2b;
+  min-width: 100%;
+  height: 498px;
+  overflow: auto;
+  border-radius: 12px;
+  border: none;
+}

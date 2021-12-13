@@ -1,0 +1,30 @@
+.faq_list_card {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin-bottom: 24px;
+}
+
+.question_para {
+  font-size: 14px;
+  font-family: 'roboto';
+  font-weight: 500;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.answer_para {
+  font-size: 14px;
+  font-family: 'roboto';
+  font-weight: 500;
+  color: #007bff;
+}
+
+@media (min-width: 768px) {
+  .question_para {
+    font-size: 16px;
+  }
+  .answer_para {
+    font-size: 16px;
+  }
+}

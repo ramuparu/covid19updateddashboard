@@ -1,0 +1,68 @@
+.pageNotFound_page {
+  min-height: 70vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.notFound_img {
+  height: 159px;
+  width: 237px;
+}
+
+.page_head {
+  font-size: 16px;
+  font-family: 'roboto';
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.sorry_para {
+  font-size: 12px;
+  font-family: 'roboto';
+  font-weight: 400;
+  color: #94a3b8;
+  width: 280px;
+}
+
+.home_btn_style {
+  background-color: #2563eb;
+  border-radius: 8px;
+  border-width: 0px;
+  height: 32px;
+  width: 66px;
+  padding: 8px, 16px, 8px, 16px;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: 'Inter';
+  font-weight: 500;
+}
+
+.home_link_style {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .notFound_img {
+    height: 300px;
+    width: 448px;
+  }
+  .page_head {
+    font-size: 32px;
+  }
+  .sorry_para {
+    font-size: 20px;
+    width: 500px;
+  }
+  .home_btn_style {
+    padding: 12px, 24px, 12px, 24px;
+    font-size: 14px;
+    height: 48px;
+    width: 88px;
+    border-radius: 12px;
+    border-width: 0px;
+  }
+}

@@ -1,0 +1,184 @@
+.dark_nav_con {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1e1e30;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  align-items: center;
+}
+.light_nav_con {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  align-items: center;
+}
+
+.dark_covid_head_style {
+  color: #f8fafc;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Bree Serif';
+}
+.light_covid_head_style {
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Bree Serif';
+}
+
+.covid_span_style {
+  color: blue;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Bree Serif';
+}
+
+.menu_button_style {
+  border: none;
+  background-color: transparent;
+}
+.dark_menu_img_style {
+  color: white;
+}
+
+.light_menu_img_style {
+  color: none;
+}
+.close_icon_btn_style {
+  border: none;
+  background-color: transparent;
+}
+.dark_close_icon_style {
+  color: white;
+}
+.light_close_icon_style {
+  color: none;
+}
+
+.list_items_card {
+  display: none;
+}
+
+.nav_Link {
+  text-decoration: none;
+}
+.btn_covid_home_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.home_route_small_card {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 24px;
+
+  align-items: center;
+  width: 100%;
+}
+.home_route_list_card {
+  padding-left: 0px;
+  display: flex;
+  align-items: center;
+}
+.dark_home_route_list_style {
+  list-style-type: none;
+  margin-right: 24px;
+  color: #f8fafc;
+}
+.light_home_route_list_style {
+  list-style-type: none;
+  margin-right: 24px;
+  color: black;
+}
+.dark_vaccine_route_list_style {
+  list-style-type: none;
+  margin-right: 24px;
+  color: #f8fafc;
+}
+.light_vaccine_route_list_style {
+  list-style-type: none;
+  margin-right: 24px;
+  color: black;
+}
+.dark_about_route_list_style {
+  list-style-type: none;
+  color: #f8fafc;
+}
+.light_about_route_list_style {
+  list-style-type: none;
+  color: black;
+}
+
+.nav_light_list_style {
+  list-style-type: none;
+  color: #f8fafc;
+  margin-left: 10px;
+}
+.nav_light_icon_style {
+  border: none;
+  background-color: transparent;
+}
+.light_icon_style {
+  color: #f8fafc;
+}
+
+@media (min-width: 900px) {
+  .dark_nav_con {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    flex-direction: row;
+  }
+  .light_nav_con {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    flex-direction: row;
+  }
+  .menu_button_style {
+    display: none;
+  }
+  .list_items_card {
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+  }
+  .covid_head_style {
+    font-size: 20px;
+  }
+  .covid_span_style {
+    font-size: 20px;
+  }
+  .home_list_style {
+    list-style-type: none;
+    color: #f8fafc;
+    margin-right: 32px;
+  }
+  .home_list_select_style {
+    color: #94a3b8;
+  }
+  .about_list_style {
+    list-style-type: none;
+    color: #f8fafc;
+  }
+
+  .about_list_select_style {
+    color: #94a3b8;
+  }
+  .home_route_small_card {
+    display: none;
+  }
+}

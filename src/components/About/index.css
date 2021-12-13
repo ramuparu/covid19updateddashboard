@@ -1,0 +1,55 @@
+.about_page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  min-height: 90vh;
+  background-size: cover;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.about_head {
+  color: #f8fafc;
+  font-size: 24px;
+  font-weight: solid;
+  font-family: 'roboto';
+}
+
+.updated_para {
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'roboto';
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+.covid19_distribution_head {
+  color: #e2e8f0;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'roboto';
+}
+
+.about_faqs_unlist_con {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+}
+
+@media (min-width: 768px) {
+  .about_page {
+    margin-top: 64px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  .about_head {
+    font-size: 48px;
+  }
+  .updated_para {
+    font-size: 18px;
+  }
+  .covid19_distribution_head {
+    font-size: 24px;
+  }
+}

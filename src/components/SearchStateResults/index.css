@@ -1,0 +1,52 @@
+.states_list_card {
+  list-style-type: none;
+  padding-bottom: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.state_name_para_style {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'roboto';
+  color: #64748b;
+}
+
+.stateCode_icon_card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(28, 212, 212, 0.16);
+  padding-left: 16px;
+  padding-right: 6px;
+  border-radius: 4px;
+}
+
+.state_code_para_style {
+  font-family: 'HK Grotesk';
+  font-size: 12px;
+  font-weight: 500;
+  color: #facc15;
+  margin-right: 12px;
+}
+
+.right_square_icon_style {
+  color: #facc15;
+}
+
+@media (min-width: 768px) {
+  .states_list_card {
+    padding-left: 48px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+  }
+  .state_code_para_style {
+    font-size: 16px;
+  }
+}
+
+.covid_state_table_link_style {
+  text-decoration: none;
+}

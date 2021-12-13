@@ -1,0 +1,189 @@
+.covid-loader-container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmed_line_chart_card {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #331427;
+
+  overflow: auto;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.active_line_chart_card {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #132240;
+  width: 100%;
+  overflow: auto;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 32px;
+}
+
+.recovered_line_chart_card {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #182829;
+  width: 100%;
+  overflow: auto;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 32px;
+}
+
+.deceased_line_chart_card {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #1c1c2b;
+  width: 100%;
+  overflow: auto;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 32px;
+}
+
+.tested_line_chart_card {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #230f41;
+  width: 100%;
+  overflow: auto;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 32px;
+}
+.positiveRatio_line_chart_card {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #332323;
+  width: 100%;
+  overflow: auto;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 32px;
+}
+
+.legend_align_style {
+  text-align: right;
+}
+
+.confirmed_bar_chart_card {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: transparent;
+
+  overflow: auto;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.active_bar_chart_card {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: transparent;
+
+  overflow: auto;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.recovered_bar_chart_card {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: transparent;
+
+  overflow: auto;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.deceased_bar_chart_card {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: transparent;
+
+  overflow: auto;
+  border-radius: 12px;
+
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.spread_heading {
+  color: #cbd5e1;
+  font-weight: 500;
+  font-family: 'roboto';
+  font-size: 24px;
+  align-self: center;
+}
+.cumulative_daily_card {
+  display: flex;
+  margin-top: 12px;
+  align-self: center;
+}
+
+.cumulative_btn {
+  background-color: #1c1c2b;
+  color: #e2e8f0;
+  font-weight: 500;
+  font-family: 'roboto';
+  font-size: 16px;
+  border-width: 0px;
+  border-radius: 2px;
+  height: 48px;
+  width: 113px;
+}
+.cumulative_change_btn_color {
+  color: #64748b;
+}
+.daily_change_btn_color {
+  color: #64748b;
+}
+
+.daily_btn {
+  background-color: #1c1c2b;
+  color: #e2e8f0;
+  font-weight: 500;
+  font-family: 'roboto';
+  font-size: 16px;
+  border-width: 0px;
+  border-radius: 2px;
+  height: 48px;
+  width: 113px;
+  margin-left: 2px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 900px) {
+  .spread_heading {
+    font-size: 32px;
+    align-self: flex-start;
+  }
+  .cumulative_daily_card {
+    align-self: flex-start;
+  }
+  .cumulative_btn {
+    font-size: 20px;
+    height: 60px;
+    width: 140px;
+  }
+  .daily_btn {
+    font-size: 20px;
+    height: 60px;
+    width: 140px;
+  }
+}

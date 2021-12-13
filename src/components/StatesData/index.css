@@ -1,0 +1,66 @@
+.stateWise_row_list_card {
+  list-style-type: none;
+  display: flex;
+}
+
+.stateWise_row_stateName_data {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #f1f5f9;
+  margin-right: 75px;
+  width: 203px;
+}
+
+.stateWise_row_confirmed_data {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ff073a;
+  margin-right: 99px;
+  width: 81px;
+  text-align: right;
+}
+
+.stateWise_row_active_data {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #007bff;
+  margin-right: 99px;
+  width: 81px;
+  text-align: right;
+}
+.stateWise_row_recover_data {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #28a745;
+  margin-right: 99px;
+  width: 81px;
+  text-align: right;
+}
+
+.stateWise_row_deceased_data {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #6c757d;
+  margin-right: 99px;
+  width: 81px;
+  text-align: right;
+}
+.stateWise_row_population_data {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #94a3b8;
+  width: 81px;
+  text-align: right;
+}
