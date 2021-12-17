@@ -253,6 +253,7 @@
 @media (min-width: 900px) {
   .vaccination_sites_doses_con {
     flex-direction: row;
+    justify-content: space-between;
   }
   .vaccination_sites_card {
     padding: 32px;

@@ -285,7 +285,6 @@ class Vaccination extends Component {
               </div>
             </div>
           </div>
-          <Pie data={vaccinationDosesPieData}> </Pie>
         </div>
 
         <Footer />

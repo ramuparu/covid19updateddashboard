@@ -124,7 +124,7 @@ class SearchCovidCasesByIndividualStates extends Component {
     districtsObj.sort((a, b) => b.confirmed - a.confirmed)
 
     return (
-      <ul className="districts_unlist_con">
+      <ul className="districts_unlist_con" testid="topDistrictsUnorderedList">
         {districtsObj.map(eachDistrict => (
           <li className="districts_list_card" key={eachDistrict.districtName}>
             <p className="district_stats_style">{eachDistrict.confirmed}</p>
@@ -143,7 +143,7 @@ class SearchCovidCasesByIndividualStates extends Component {
     const {districtsObj} = this.state
     districtsObj.sort((a, b) => b.active - a.active)
     return (
-      <ul className="districts_unlist_con">
+      <ul className="districts_unlist_con" testid="topDistrictsUnorderedList">
         {districtsObj.map(eachDistrict => (
           <li className="districts_list_card" key={eachDistrict.districtName}>
             <p className="district_stats_style">{eachDistrict.active}</p>
@@ -162,7 +162,7 @@ class SearchCovidCasesByIndividualStates extends Component {
     const {districtsObj} = this.state
     districtsObj.sort((a, b) => b.recovered - a.recovered)
     return (
-      <ul className="districts_unlist_con">
+      <ul className="districts_unlist_con" testid="topDistrictsUnorderedList">
         {districtsObj.map(eachDistrict => (
           <li className="districts_list_card" key={eachDistrict.districtName}>
             <p className="district_stats_style">{eachDistrict.recovered}</p>
@@ -181,7 +181,7 @@ class SearchCovidCasesByIndividualStates extends Component {
     const {districtsObj} = this.state
     districtsObj.sort((a, b) => b.deceased - a.deceased)
     return (
-      <ul className="districts_unlist_con">
+      <ul className="districts_unlist_con" testid="topDistrictsUnorderedList">
         {districtsObj.map(eachDistrict => (
           <li className="districts_list_card" key={eachDistrict.districtName}>
             <p className="district_stats_style">{eachDistrict.deceased}</p>
@@ -237,10 +237,7 @@ class SearchCovidCasesByIndividualStates extends Component {
     console.log(testedLastMonth)
     return (
       <>
-        <div
-          className="covidCases_individual_states_page"
-          testId="lineChartsContainer"
-        >
+        <div className="covidCases_individual_states_page">
           <div className="covidTested_head_card">
             <h1 className="covid_state_name_head">{stateName}</h1>
             <ul className="covid_tested_card">
@@ -261,28 +258,6 @@ class SearchCovidCasesByIndividualStates extends Component {
             activeStatus={activeStatus}
           />
 
-          <div className="map_image_container">
-            <img
-              src={stateMapUrl}
-              className="map_image_style"
-              alt="stateMapImage"
-            />
-            <div className="ncp_report_card">
-              <div>
-                <h1 className="ncp_report_head">NCP Report</h1>
-                <div className="population_card">
-                  <p className="population_label">Population</p>
-                  <p className="population_value">{population}</p>
-                </div>
-              </div>
-              <div className="tested_card">
-                <p className="tested_label">Tested</p>
-                <p className="tested_value">{tested}</p>
-                <p className="tested_date">{`(As of ${testedLastDate} ${testedLastMonth} per source)`}</p>
-              </div>
-            </div>
-          </div>
-
           <h1 className="districts_head_style">Top Districts</h1>
 
           {this.renderDistrictCasesOnSelectionBasis()}
@@ -294,7 +269,7 @@ class SearchCovidCasesByIndividualStates extends Component {
   }
 
   renderLoaderView = () => (
-    <div className="covid-loader-container" testId="stateDetailsLoader">
+    <div className="covid-loader-container" testid="stateDetailsLoader">
       <Loader type="Tailspin" color="#0b69ff" height="50" width="50" />
     </div>
   )

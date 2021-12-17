@@ -470,8 +470,8 @@ class Home extends Component {
             className="state_covid_information_con"
             testId="stateWiseCovidDataTable"
           >
-            <ul className="stateWiseTableColumns_con">
-              <li className="stateWise_table_cols_list">
+            <div className="stateWiseTableColumns_con">
+              <div className="stateWise_table_cols_list">
                 <h1 className="stateWise_col_state_head">States/UT</h1>
                 <div className="stateWise_col_icons_card">
                   <button
@@ -496,8 +496,8 @@ class Home extends Component {
                 <p className="stateWise_col_recovered_head">Recovered</p>
                 <p className="stateWise_col_deceased_head">Deceased</p>
                 <p className="stateWise_col_population_head">Population</p>
-              </li>
-            </ul>
+              </div>
+            </div>
             <hr className="horizontal_line_style" />
             <ul className="stateWise_row_con">
               {stateWiseCovidSortOptionBased.map(eachState => (

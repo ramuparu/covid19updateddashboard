@@ -360,7 +360,7 @@ class TimeLineData extends Component {
           Daily
         </button>
       </div>
-      <div testId="lineChartsContainer">
+      <div testid="lineChartsContainer">
         {this.renderConfirmedLineChart()}
         {this.renderActiveLineChart()}
         {this.renderRecoveredLineChart()}
@@ -372,7 +372,7 @@ class TimeLineData extends Component {
   )
 
   renderLoaderView = () => (
-    <div className="covid-loader-container" testId="timelinesDataLoader">
+    <div className="covid-loader-container" testid="timelinesDataLoader">
       <Loader type="Tailspin" color="#0b69ff" height="50" width="50" />
     </div>
   )

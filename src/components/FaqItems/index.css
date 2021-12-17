@@ -19,6 +19,14 @@
   font-weight: 500;
   color: #007bff;
 }
+.answer_link_para {
+  font-size: 14px;
+  font-family: 'roboto';
+  font-weight: 500;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+}
 
 @media (min-width: 768px) {
   .question_para {
