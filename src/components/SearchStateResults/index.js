@@ -8,7 +8,7 @@ const SearchStateResults = props => {
   const {eachSearch} = props
   const {stateCode, stateName} = eachSearch
   return (
-    <Link to={`/state/${stateCode}`} className="covid_state_table_link_style">
+    <Link to={`state/${stateCode}`} className="covid_state_table_link_style">
       <li className="states_list_card">
         <p className="state_name_para_style">{stateName}</p>
         <div className="stateCode_icon_card">

@@ -283,7 +283,7 @@ class Home extends Component {
     this.setState({apiStatus: apiStatusKeys.inprogress})
     const response = await fetch('https://apis.ccbp.in/covid19-state-wise-data')
 
-    if (response.ok) {
+    if (response.ok === true) {
       const data = await response.json()
       this.convertObjectsDataIntoListItemsUsingForInMethod(data)
       this.setState({
@@ -344,7 +344,7 @@ class Home extends Component {
     let activeStatusInIndia = 0
     let recoveredStatusInIndia = 0
     let deceasedStatusInIndia = 0
-    let populationStatusInIndia = 0
+
     if (totalStatusList.length >= 1) {
       /* TO SUM THE TOTAL CONFIRMED CASES */
       const confirmedStatsArray = totalStatusList.map(
@@ -377,13 +377,6 @@ class Home extends Component {
         (each, currentValue) => each + currentValue,
       )
       /* TO SUM THE TOTAL POPULATION */
-
-      const populationStatsArray = totalStatusList.map(
-        everyDetail => everyDetail.population,
-      )
-      populationStatusInIndia = populationStatsArray.reduce(
-        (each, currentValue) => each + currentValue,
-      )
     }
 
     return (
@@ -476,7 +469,7 @@ class Home extends Component {
                 <div className="stateWise_col_icons_card">
                   <button
                     type="button"
-                    testId="ascendingSort"
+                    testid="ascendingSort"
                     className="ascending_btn_style"
                     onClick={this.whenUserPressAscBtn}
                   >
@@ -484,7 +477,7 @@ class Home extends Component {
                   </button>
                   <button
                     type="button"
-                    testId="descendingSort"
+                    testid="descendingSort"
                     className="descending_btn_style"
                     onClick={this.whenUserPressDesBtn}
                   >

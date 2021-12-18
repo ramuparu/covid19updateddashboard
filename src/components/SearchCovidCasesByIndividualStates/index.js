@@ -2,8 +2,9 @@ import {Component} from 'react'
 
 import Loader from 'react-loader-spinner'
 import {changeStateKeysData} from '../Home/index'
-import TimeLineData from '../TimeLineData'
+
 import CasesStatus from '../CasesStatus'
+import TimeLineData from '../TimeLineData'
 import NotFound from '../NotFound'
 import Footer from '../Footer'
 import './index.css'
@@ -17,9 +18,6 @@ const apiStatusKeys = {
 
 class SearchCovidCasesByIndividualStates extends Component {
   state = {
-    deltaObj: {},
-    delta21Obj: {},
-    delta7: {},
     districtsObj: [],
     metaObj: {},
     totalCasesObj: {},
@@ -43,7 +41,7 @@ class SearchCovidCasesByIndividualStates extends Component {
     const response = await fetch('https://apis.ccbp.in/covid19-state-wise-data')
 
     const data = await response.json()
-    console.log(data)
+
     this.setState({stateNameCode: stateCode})
 
     if (response.ok) {
@@ -53,17 +51,13 @@ class SearchCovidCasesByIndividualStates extends Component {
         stateInformation.districts,
       )
 
-      const deltaItems = stateInformation.delta
-      const delta7Items = stateInformation.delta7
-      const delta21Items = stateInformation.delta21_14
       const totalCasesItems = stateInformation.total
 
       const metaInfoItems = {
         date: stateInformation.meta.date,
         lastUpdated: stateInformation.meta.last_updated,
         population: stateInformation.meta.population,
-        testedDate: stateInformation.meta.tested.date,
-        testedSource: stateInformation.meta.tested.source,
+
         vaccinatedDate: stateInformation.meta.vaccinated,
       }
 
@@ -74,9 +68,7 @@ class SearchCovidCasesByIndividualStates extends Component {
 
       this.setState({
         apiStatus: apiStatusKeys.success,
-        deltaObj: deltaItems,
-        delta7: delta7Items,
-        delta21Obj: delta21Items,
+
         metaObj: metaInfoItems,
         totalCasesObj: totalCasesItems,
         stateName: stateNameFinal,
@@ -194,6 +186,7 @@ class SearchCovidCasesByIndividualStates extends Component {
 
   renderDistrictCasesOnSelectionBasis = () => {
     const {activeStatus} = this.state
+
     switch (activeStatus) {
       case 'confirmed':
         return this.renderConfirmedCases()
@@ -210,39 +203,25 @@ class SearchCovidCasesByIndividualStates extends Component {
 
   renderStatesCovidInformation = () => {
     const {
-      deltaObj,
-      delta7,
-      delta21Obj,
-      districtsObj,
       stateName,
       metaObj,
       totalCasesObj,
       activeStatus,
       stateNameCode,
     } = this.state
-    console.log(activeStatus)
 
-    const stateMap = changeStateKeysData.find(
-      eachImage => eachImage.stateCode === stateNameCode,
-    )
-    const stateMapUrl = stateMap.stateImageUrl
     const {tested, confirmed, deceased, recovered} = totalCasesObj
     const activeStats = confirmed - (deceased + recovered)
-    const {lastUpdated, population, testedDate} = metaObj
+    const {lastUpdated} = metaObj
 
-    const fullDate = new Date(testedDate)
-    const testedLastDate = fullDate.getDate()
-    const testedLastMonth = fullDate.getMonth()
-
-    console.log(testedLastMonth)
     return (
       <>
         <div className="covidCases_individual_states_page">
           <div className="covidTested_head_card">
             <h1 className="covid_state_name_head">{stateName}</h1>
             <ul className="covid_tested_card">
-              <li className="covid_tested_para">Tested</li>
-              <li className="covid_tested_stats_para">{tested}</li>
+              <p className="covid_tested_para">Tested</p>
+              <p className="covid_tested_stats_para">{tested}</p>
             </ul>
           </div>
           <p className="covid_last_update_para">{`Last update on ${lastUpdated}`}</p>
@@ -261,7 +240,10 @@ class SearchCovidCasesByIndividualStates extends Component {
           <h1 className="districts_head_style">Top Districts</h1>
 
           {this.renderDistrictCasesOnSelectionBasis()}
-          <TimeLineData stateNameCode={stateNameCode} />
+          <TimeLineData
+            stateNameCode={stateNameCode}
+            activeType={activeStatus}
+          />
         </div>
         <Footer />
       </>
@@ -277,8 +259,7 @@ class SearchCovidCasesByIndividualStates extends Component {
   renderFailureCase = () => <NotFound />
 
   render() {
-    const {apiStatus, timeLineData} = this.state
-    console.log(timeLineData)
+    const {apiStatus} = this.state
 
     switch (apiStatus) {
       case apiStatusKeys.inprogress:

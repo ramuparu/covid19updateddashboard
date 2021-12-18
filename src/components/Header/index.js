@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
-import {HiLightBulb, HiOutlineLightBulb} from 'react-icons/hi'
+
 import {AiOutlineMenuFold, AiOutlineCloseCircle} from 'react-icons/ai'
 import './index.css'
 

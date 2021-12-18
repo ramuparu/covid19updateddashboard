@@ -44,7 +44,7 @@ class About extends Component {
     console.log(faqList)
     return (
       <>
-        <div className="about_page" testId="aboutRouteLoader">
+        <div className="about_page">
           <h1 className="about_head">About</h1>
           <p className="updated_para">Last update on march 28th 2021.</p>
           <h1 className="covid19_distribution_head">

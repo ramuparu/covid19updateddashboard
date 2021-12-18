@@ -4,7 +4,6 @@ import {
   LineChart,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   Legend,
   Line,
@@ -24,10 +23,17 @@ const apiStatusKeys = {
   initial: 'INITIAL',
 }
 
+const activeCategory = {
+  confirmed: 'confirmed',
+  active: 'activeValue',
+  recovered: 'recoveredValue',
+  deceased: 'deceasedValue',
+}
+
 class TimeLineData extends Component {
   state = {
     apiStatus: apiStatusKeys.initial,
-    lineChartBtn: '',
+
     timeLineData: [],
   }
 
@@ -314,39 +320,26 @@ class TimeLineData extends Component {
     )
   }
 
-  renderPositiveRatioLineChart = () => {
-    const {timeLineData} = this.state
+  covidCasesCategoryTypeBarCharts = () => {
+    const {activeType} = this.props
 
-    return (
-      <div className="positiveRatio_line_chart_card">
-        <LineChart
-          width={1200}
-          height={250}
-          data={timeLineData[5]}
-          margin={{top: 5, right: 30, left: 20, bottom: 5}}
-        >
-          <XAxis dataKey="positiveDate" stroke="#FD7E14" />
-          <YAxis stroke="#FD7E14" />
-          <Tooltip />
-          <Legend />
-          <Line
-            type="monotone"
-            dataKey="Test Positivity Ratio"
-            stroke="#FD7E14"
-          />
-        </LineChart>
-      </div>
-    )
+    switch (activeType) {
+      case activeCategory.active:
+        return this.renderActiveBarChart()
+      case activeCategory.confirmed:
+        return this.renderConfirmedBarChart()
+      case activeCategory.recovered:
+        return this.renderRecoveredBarChart()
+      case activeCategory.deceased:
+        return this.renderDeceasedBarChart()
+      default:
+        return null
+    }
   }
 
   renderTimeLineBarAndLineCharts = () => (
     <>
-      <div>
-        {this.renderConfirmedBarChart()}
-        {this.renderActiveBarChart()}
-        {this.renderRecoveredBarChart()}
-        {this.renderDeceasedBarChart()}
-      </div>
+      <div>{this.covidCasesCategoryTypeBarCharts()}</div>
       <h1 className="spread_heading">Spread Trends</h1>
       <div className="cumulative_daily_card">
         <button type="button" className="cumulative_btn">
@@ -366,7 +359,6 @@ class TimeLineData extends Component {
         {this.renderRecoveredLineChart()}
         {this.renderDeceasedLineChart()}
         {this.renderTestedLineChart()}
-        {this.renderPositiveRatioLineChart()}
       </div>
     </>
   )
