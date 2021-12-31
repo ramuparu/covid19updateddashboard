@@ -256,7 +256,6 @@ class Home extends Component {
     stateValue: '',
     totalStatusList: [],
     apiStatus: apiStatusKeys.initial,
-    sortISActive: true,
   }
 
   componentDidMount() {
@@ -270,11 +269,21 @@ class Home extends Component {
   }
 
   whenUserPressAscBtn = () => {
-    this.setState({sortISActive: true})
+    const {totalStatusList} = this.state
+    if (totalStatusList[0].stateCode === 'AN') {
+      this.setState({totalStatusList})
+    } else {
+      this.setState({totalStatusList: totalStatusList.reverse()})
+    }
   }
 
   whenUserPressDesBtn = () => {
-    this.setState({sortISActive: false})
+    const {totalStatusList} = this.state
+    if (totalStatusList[0].stateCode !== 'AN') {
+      this.setState({totalStatusList})
+    } else {
+      this.setState({totalStatusList: totalStatusList.reverse()})
+    }
   }
 
   /* COVID STATS API DATA CALL */
@@ -329,11 +338,9 @@ class Home extends Component {
   renderFailureView = () => <NotFound />
 
   renderHomeCovidPage = () => {
-    const {stateValue, totalStatusList, sortISActive} = this.state
+    const {stateValue, totalStatusList} = this.state
 
-    const stateWiseCovidSortOptionBased = sortISActive
-      ? totalStatusList
-      : totalStatusList.reverse()
+    const stateWiseCovidSortOptionBased = totalStatusList
 
     const searchSelectCon = changeStateKeysData.filter(eachList =>
       eachList.stateName.toUpperCase().includes(stateValue.toUpperCase()),

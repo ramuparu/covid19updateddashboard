@@ -321,3 +321,151 @@
   border-radius: 12px;
   border: none;
 }
+
+.vaccination_line_con {
+  margin-left: 24px;
+  margin-right: 24px;
+  background-color: #1c1c2b;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-x: scroll;
+}
+
+.vaccination_line_chart_head {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  color: #94a3b8;
+}
+
+.vaccination_line_chart_button_card {
+  display: flex;
+  margin-bottom: 10px;
+}
+.vaccination_line_chart_byDoses_active_Button {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  color: #ffffff;
+  height: 50px;
+  width: 90px;
+  border-top: none;
+  border-bottom: 2px blue solid;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  margin-right: 10px;
+}
+.vaccination_line_chart_byDoses_deActive_Button {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  color: #ffffff;
+  height: 50px;
+  width: 90px;
+  border-top: none;
+  border-bottom: 2px #ffffff solid;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+.vaccination_line_chart_byAge_active_Button {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  color: #ffffff;
+  height: 50px;
+  width: 90px;
+  border-top: none;
+  border-bottom: 2px blue solid;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+}
+.vaccination_line_chart_byAge_deActive_Button {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  color: #ffffff;
+  height: 50px;
+  width: 90px;
+  border-top: none;
+  border-bottom: 2px #ffffff solid;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+}
+
+@media (min-width: 900px) {
+  .vaccination_line_con {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  .vaccination_line_chart_head {
+    font-size: 18px;
+  }
+}
+
+.vaccination_pie_radius_con {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 24px;
+}
+.vaccination_pie_half_radius_con {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c2b;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+}
+
+.vaccination_pie_radius_chart_head {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  color: #94a3b8;
+}
+
+.vaccination_pie_full_radius_circle_con {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c2b;
+  padding: 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.vaccination_pie_full_radius_chart_head {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  color: #94a3b8;
+}
+
+@media (min-width: 768px) {
+  .vaccination_pie_radius_con {
+    flex-direction: row;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .vaccination_pie_half_radius_con {
+    width: 50%;
+  }
+
+  .vaccination_pie_radius_chart_head {
+    font-size: 24px;
+  }
+  .vaccination_pie_full_radius_circle_con {
+    width: 50%;
+    margin-left: 10px;
+    margin-top: 0px;
+  }
+  .vaccination_pie_full_radius_chart_head {
+    font-size: 24px;
+  }
+}

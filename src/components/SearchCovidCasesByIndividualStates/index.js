@@ -57,7 +57,7 @@ class SearchCovidCasesByIndividualStates extends Component {
         date: stateInformation.meta.date,
         lastUpdated: stateInformation.meta.last_updated,
         population: stateInformation.meta.population,
-
+        testedDate: stateInformation.meta.tested.date,
         vaccinatedDate: stateInformation.meta.vaccinated,
       }
 
@@ -210,9 +210,18 @@ class SearchCovidCasesByIndividualStates extends Component {
       stateNameCode,
     } = this.state
 
+    const stateMap = changeStateKeysData.find(
+      eachImage => eachImage.stateCode === stateNameCode,
+    )
+    const stateMapUrl = stateMap.stateImageUrl
+
     const {tested, confirmed, deceased, recovered} = totalCasesObj
     const activeStats = confirmed - (deceased + recovered)
-    const {lastUpdated} = metaObj
+    const {lastUpdated, population, testedDate} = metaObj
+
+    const fullDate = new Date(testedDate)
+    const testedLastDate = fullDate.getDate()
+    const testedLastMonth = fullDate.getMonth()
 
     return (
       <>
@@ -236,6 +245,28 @@ class SearchCovidCasesByIndividualStates extends Component {
             whenUserClickRecoveredCases={this.whenUserClickRecoveredCases}
             activeStatus={activeStatus}
           />
+
+          <div className="map_image_container">
+            <img
+              src={stateMapUrl}
+              className="map_image_style"
+              alt="stateMapImage"
+            />
+            <div className="ncp_report_card">
+              <div>
+                <h1 className="ncp_report_head">NCP Report</h1>
+                <div className="population_card">
+                  <p className="population_label">Population</p>
+                  <p className="population_value">{population}</p>
+                </div>
+              </div>
+              <div className="tested_card">
+                <p className="tested_label">Tested</p>
+                <p className="tested_value">{tested}</p>
+                <p className="tested_date">{`(As of ${testedLastDate} ${testedLastMonth} per source)`}</p>
+              </div>
+            </div>
+          </div>
 
           <h1 className="districts_head_style">Top Districts</h1>
 

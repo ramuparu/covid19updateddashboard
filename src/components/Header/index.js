@@ -1,11 +1,11 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
-
+import {HiLightBulb, HiOutlineLightBulb} from 'react-icons/hi'
 import {AiOutlineMenuFold, AiOutlineCloseCircle} from 'react-icons/ai'
 import './index.css'
 
 class Header extends Component {
-  state = {navMenuBtn: false}
+  state = {navMenuBtn: false, themeButton: true}
 
   userPressMenuButton = () => {
     this.setState({navMenuBtn: true})
@@ -15,14 +15,77 @@ class Header extends Component {
     this.setState({navMenuBtn: false})
   }
 
-  render() {
-    const {navMenuBtn} = this.state
+  userPressLightThemeIcon = () => {
+    this.setState({themeButton: false})
+  }
+
+  userPressDarkThemeIcon = () => {
+    this.setState({themeButton: true})
+  }
+
+  whenThemeActivatedFunction = () => {
+    const {themeButton} = this.state
 
     return (
-      <nav className="dark_nav_con">
+      <>
+        {themeButton ? (
+          <li className="nav_light_list_style">
+            <button
+              className="nav_light_icon_style"
+              type="button"
+              onClick={this.userPressLightThemeIcon}
+            >
+              <HiOutlineLightBulb className="light_icon_style" />
+            </button>
+          </li>
+        ) : (
+          <li className="nav_light_list_style">
+            <button
+              className="nav_light_icon_style"
+              type="button"
+              onClick={this.userPressDarkThemeIcon}
+            >
+              <HiLightBulb />
+            </button>
+          </li>
+        )}
+      </>
+    )
+  }
+
+  render() {
+    const {navMenuBtn, themeButton} = this.state
+
+    const navThemeCssApply = themeButton ? 'dark_nav_con' : 'light_nav_con'
+    const headCssApply = themeButton
+      ? 'dark_covid_head_style'
+      : 'light_covid_head_style'
+
+    const homeRouteCssApply = themeButton
+      ? 'dark_home_route_list_style'
+      : 'light_home_route_list_style'
+
+    const aboutRouteCssApply = themeButton
+      ? 'dark_about_route_list_style'
+      : 'light_about_route_list_style'
+
+    const closeIconCssApply = themeButton
+      ? 'dark_close_icon_style'
+      : 'light_close_icon_style'
+
+    const menuIconCssApply = themeButton
+      ? 'dark_menu_img_style'
+      : 'light_menu_img_style'
+
+    const vaccinationRouteCssApply = themeButton
+      ? 'dark_vaccine_route_list_style'
+      : 'light_vaccine_route_list_style'
+
+    return (
+      <nav className={navThemeCssApply}>
         <div className="btn_covid_home_card">
           <Link to="/" className="nav_Link">
-            <h1 className="dark_covid_head_style">COVID19INDIA</h1>
+            <h1 className={headCssApply}>COVID19INDIA</h1>
           </Link>
 
           <button
@@ -30,7 +93,7 @@ class Header extends Component {
             type="button"
             onClick={this.userPressMenuButton}
           >
-            <AiOutlineMenuFold className="dark_menu_img_style" />
+            <AiOutlineMenuFold className={menuIconCssApply} />
           </button>
         </div>
 
@@ -38,19 +101,23 @@ class Header extends Component {
           <div className="home_route_small_card">
             <ul className="home_route_list_card">
               <Link to="/" className="nav_Link">
-                <li className="dark_home_route_list_style">Home</li>
+                <li className={homeRouteCssApply}>Home</li>
+              </Link>
+              <Link to="/vaccination" className="nav_Link">
+                <li className={vaccinationRouteCssApply}>Vaccination</li>
+              </Link>
+              <Link to="/about" className="nav_Link">
+                <li className={aboutRouteCssApply}>About</li>
               </Link>
 
-              <Link to="/about" className="nav_Link">
-                <li className="dark_about_route_list_style">About</li>
-              </Link>
+              {this.whenThemeActivatedFunction()}
             </ul>
             <button
               type="button"
               onClick={this.userPressCloseIcon}
               className="close_icon_btn_style"
             >
-              <AiOutlineCloseCircle className="dark_close_icon_style" />
+              <AiOutlineCloseCircle className={closeIconCssApply} />
             </button>
           </div>
         ) : (
@@ -59,12 +126,15 @@ class Header extends Component {
 
         <ul className="list_items_card">
           <Link to="/" className="nav_Link">
-            <li className="dark_home_route_list_style">Home</li>
+            <li className={homeRouteCssApply}>Home</li>
           </Link>
-
+          <Link to="/vaccination" className="nav_Link">
+            <li className={vaccinationRouteCssApply}>Vaccination</li>
+          </Link>
           <Link to="/about" className="nav_Link">
-            <li className="dark_about_route_list_style">About</li>
+            <li className={aboutRouteCssApply}>About</li>
           </Link>
+          {this.whenThemeActivatedFunction()}
         </ul>
       </nav>
     )
